@@ -76,6 +76,7 @@ class VDictScraper:
                 for li in word_explain.select('li'):
                     # Lấy loại từ và định nghĩa
                     content = li.get_text().strip()
+                    pos = 'unknown'  # Explicitly initialize 'pos'
                     if content:
                         # Cố gắng tách loại từ và định nghĩa
                         match = re.match(r'^(\w+)\s+(.+)$', content)
@@ -90,7 +91,7 @@ class VDictScraper:
                             result['definitions'].append({
                                 'definition': content,
                                 'definition_vi': content,  # Đã là tiếng Việt rồi
-                                'pos': 'unknown'
+                                'pos': pos
                             })
                         
                         # Lấy ví dụ
@@ -106,13 +107,13 @@ class VDictScraper:
                                         result['examples'].append({
                                             'text': en,
                                             'text_vi': vi,
-                                            'pos': pos if 'pos' in locals() else 'unknown'
+                                            'pos': pos
                                         })
                                     else:
                                         result['examples'].append({
                                             'text': ex_text,
                                             'text_vi': '',
-                                            'pos': pos if 'pos' in locals() else 'unknown'
+                                            'pos': pos
                                         })
             
             return result

@@ -142,7 +142,7 @@ class StarDictAnhViet:
             conn.commit()
             conn.close()
             
-            self.logger.info(f"Đã nhập {word_idx} từ từ từ điển {source_name}")
+            self.logger.info(f"Đã nhập {word_idx} từ điển {source_name}")
             return True
             
         except Exception as e:
