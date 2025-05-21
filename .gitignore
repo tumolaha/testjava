@@ -1,0 +1,76 @@
+# Thư mục từ điển và dữ liệu
+data/
+dictionaries/
+temp/
+
+# Tệp cơ sở dữ liệu
+*.db
+*.sqlite
+*.sqlite3
+
+# Các tệp SQL xuất ra
+*_export_*.sql
+*_[0-9]*.sql
+dictionary_export_*.sql
+
+# Tệp cấu hình và thông tin đăng nhập
+.env
+config.ini
+credentials.json
+api_keys.json
+
+# Tệp nhật ký
+logs/
+*.log
+
+# Cache Python
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Môi trường ảo
+venv/
+env/
+.venv/
+.env/
+ENV/
+
+# IDE và trình soạn thảo
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+
+# Tệp tạm thời
+*.tmp
+*.bak
+*.swp
+*.swo
+*~
+
+# Thư mục build và phân phối
+build/
+dist/
+*.egg-info/
+
+# Tệp nén
+*.tar
+*.gz
+*.zip
+*.rar
+*.7z
+
+# Tệp từ điển lớn
+*.dict
+*.dict.dz
+*.idx
+*.ifo
+
+# Các tệp đặc biệt khác
+*.pickle
+*.pkl
+*.npy
